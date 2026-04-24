@@ -1,10 +1,10 @@
 Quiz Leaderboard System
 
-📌 Objective
+bjective
 
 Fetch quiz data from API, remove duplicate entries, and generate leaderboard.
 
-⚙️ Approach
+Approach
 
 Called API 10 times (poll 0–9)
 Maintained 5 sec delay between calls
@@ -12,7 +12,7 @@ Used (roundId + participant) to remove duplicates
 Aggregated scores using HashMap
 Sorted leaderboard in descending order
 
-🚀 How to Run
+How to Run
 
 1. Compile:
    javac QuizApp.java
@@ -20,12 +20,12 @@ Sorted leaderboard in descending order
 2. Run:
    java QuizApp
 
-✅ Output
+Output
 
 Correct leaderboard
 Correct total score
 
-🛠 Tech Used
+Tech Used
 Java
 HashSet
 HashMap
