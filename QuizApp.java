@@ -5,7 +5,7 @@ import java.util.*;
 public class QuizApp {
 
     static final String BASE_URL = "https://devapigw.vidalhealthtpa.com/srm-quiz-task";
-    static final String REG_NO = "RA76"; // replace if needed
+    static final String REG_NO = "RA76"; 
 
     public static void main(String[] args) throws Exception {
 
@@ -33,7 +33,7 @@ public class QuizApp {
 
             String response = content.toString();
 
-            // Split roughly into blocks
+        
             String[] blocks = response.split("\\{");
 
             for (String block : blocks) {
@@ -66,7 +66,7 @@ public class QuizApp {
             Thread.sleep(5000);
         }
 
-        // Sort leaderboard
+        
         List<Map.Entry<String, Integer>> list = new ArrayList<>(scores.entrySet());
         list.sort((a, b) -> b.getValue() - a.getValue());
 
@@ -81,7 +81,7 @@ public class QuizApp {
         System.out.println("Total Score: " + total);
     }
 
-    // Extract string fields
+    
     static String extract(String text, String key) {
         try {
             int start = text.indexOf(key) + key.length() + 3;
@@ -92,7 +92,7 @@ public class QuizApp {
         }
     }
 
-    // Extract score safely
+    
     static String extractScore(String text) {
         try {
             int start = text.indexOf("score") + 8;
